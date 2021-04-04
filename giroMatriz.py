@@ -1,7 +1,9 @@
-flecha2 = [["-","X"],
-           ["X","-"]]
+figura = [["-","X","X"],
+           ["X","-","-"],
+           ["X","-","-"],
+           ["-","X","X"]]
 
-flecha3 = [["O","-","X","X"],
+figura2 = [["O","-","X","X"],
            ["-","X","+","X"],
            ["X","+","X","-"],
            ["X","X","-","Q"]]
@@ -17,7 +19,7 @@ flecha1 = [["-","-","-","-","-","-","X","X"],
 
 def girar(flecha,giros):
     nuevaFlecha = []
-    for i in range(len(flecha)):
+    for i in range(len(flecha[0])):
         nuevaFlecha.append([])
         for s in range(len(flecha)):
             nuevaFlecha[i].append(flecha[len(flecha)-(s+1)][i])
@@ -36,4 +38,4 @@ def girarFlecha(flecha,cantidadGiros):
         print(fila)
     girar(flecha,cantidadGiros)
 
-girarFlecha(flecha1,3)
+girarFlecha(figura,3)
